@@ -1,0 +1,29 @@
+[
+    {
+        "title": "User Details",
+        "components": [
+            {
+                "type": "text",
+                "label": "username",
+                "title": "Enter your username",
+                "placeholder": "Enter username"
+            },
+            {
+                "type": "image",
+                "label": "image",
+                "title": "Example Image"
+            },
+            {
+                "type": "video",
+                "label": "video",
+                "title": "Example Video"
+            },
+            {
+                "type": "audio",
+                "label": "audio",
+                "title": "Example Audio"
+            }
+            
+        ]
+    }
+]

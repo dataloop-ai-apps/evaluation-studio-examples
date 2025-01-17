@@ -1,0 +1,34 @@
+[
+    {
+        "title": "User Details",
+        "components": [
+            {
+                "type": "text",
+                "label": "username",
+                "title": "Enter your username",
+                "placeholder": "Enter username"
+            },
+            {
+                "type": "radio",
+                "label": "thoughts",
+                "title": "Do you have any thoughts?",
+                "default": false,
+                "options": [
+                    { "label": "Yes", "value": true },
+                    { "label": "No", "value": false }
+                ]
+            },
+            {
+                "type": "text",
+                "label": "question2",
+                "title": "Enter your thoughts",
+                "tooltip": "write what you think",
+                "placeholder": "I think about...",
+                "hierarchy": {
+                    "parentLabel": "thoughts",
+                    "parentValue": true
+                  }
+            }
+        ]
+    }
+]

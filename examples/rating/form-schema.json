@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Prompt-Response",
+        "components": [
+            {
+                "type": "text",
+                "label": "prompt",
+                "title": "Prompt",
+                "placeholder": "Prompt"
+            },
+            {
+                "type": "text",
+                "label": "response",
+                "title": "Response",
+                "placeholder": "Response"
+            },
+            {
+                "type": "rating",
+                "label": "rating",
+                "title": "Is the response fine?",
+                "tooltip": "Rate the response",
+                "maxStars": 7,
+                "showValue": true,
+                "placeholder": "Rating"
+            }
+        ]
+    }
+]

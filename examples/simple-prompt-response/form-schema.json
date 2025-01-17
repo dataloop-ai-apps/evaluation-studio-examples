@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Prompt-Response",
+        "components": [
+            {
+                "type": "text",
+                "label": "prompt",
+                "title": "Prompt",
+                "placeholder": "Prompt"
+            },
+            {
+                "type": "text",
+                "label": "response",
+                "title": "Response",
+                "placeholder": "Response"
+            }
+        ]
+    }
+]

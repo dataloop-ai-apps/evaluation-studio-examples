@@ -1,0 +1,71 @@
+[
+    {
+        "title": "User Details",
+        "layout": { "direction": "horizontal", "wrap": false },
+        "components": [
+            {
+                "type": "text",
+                "label": "Username",
+                "title": "Enter your username",
+                "tooltip": "write what you think",
+                "placeholder": "Enter username"
+            },
+            {
+                "type": "radio",
+                "label": "correct",
+                "title": "is this correct?",
+                "default": false,
+                "options": [
+                    { "label": "Yes", "value": true },
+                    { "label": "No", "value": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "User Details",
+        "layout": { "direction": "horizontal", "wrap": true },
+        "components": [
+            {
+                "type": "text",
+                "label": "Username",
+                "title": "Enter your username",
+                "tooltip": "write what you think",
+                "placeholder": "Enter username"
+            },
+            {
+                "type": "radio",
+                "label": "correct",
+                "title": "is this correct?",
+                "default": false,
+                "options": [
+                    { "label": "Yes", "value": true },
+                    { "label": "No", "value": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "User Details",
+        "layout": { "direction": "horizontal", "wrap": true },
+        "components": [
+            {
+                "type": "text",
+                "label": "Username",
+                "title": "Enter your username",
+                "tooltip": "write what you think",
+                "placeholder": "Enter username"
+            },
+            {
+                "type": "radio",
+                "label": "correct",
+                "title": "is this correct?",
+                "default": false,
+                "options": [
+                    { "label": "Yes", "value": true },
+                    { "label": "No", "value": false }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "title": "User Details",
+        "components": [
+            {
+                "type": "text",
+                "label": "username",
+                "title": "Enter your username",
+                "tooltip": "write what you think",
+                "placeholder": "Enter username"
+            }
+        ]
+    },
+    {
+        "title": "User Config",
+        "components": [
+            {
+                "type": "text",
+                "label": "prompt",
+                "title": "Enter your prompt",
+                "placeholder": "Enter your prompt"
+            },
+            {
+                "type": "text",
+                "label": "response",
+                "title": "Enter your response",
+                "placeholder": "Enter your response"
+            },
+            {
+                "type": "select",
+                "label": "safe",
+                "title": "Select if safe?",
+                "placeholder": "Select if safe?",
+                "tooltip": "write what you think",
+                "options": [
+                    { "label": "Yes", "value": "yes" },
+                    { "label": "No", "value": "no" },
+                    { "label": "Cant say", "value": "dont_know" }
+                ]
+            },
+            {
+                "type": "text",
+                "label": "reason",
+                "title": "Enter your reason",
+                "placeholder": "Enter your reason"
+            },
+            {
+                "type": "radio",
+                "label": "correct",
+                "title": "is this correct?",
+                "default": false,
+                "options": [
+                    { "label": "Yes", "value": true },
+                    { "label": "No", "value": false }
+                ]
+            }
+        ]
+    }
+]
