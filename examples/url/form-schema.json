@@ -1,0 +1,40 @@
+[
+    {
+        "title": "URL Details",
+        "components": [
+            {
+                "type": "url",
+                "label": "iframeUrl",
+                "title": "Website URL in iframe",
+                "tooltip": "Website tooltip"
+            },
+            {
+                "type": "url",
+                "label": "fetchUrl",
+                "title": "Website URL to fetch",
+                "tooltip": "Website tooltip"
+            },
+            {
+                "type": "radio",
+                "label": "thoughts",
+                "title": "Do you have any thoughts?",
+                "default": false,
+                "options": [
+                    { "label": "Yes", "value": true },
+                    { "label": "No", "value": false }
+                ]
+            },
+            {
+                "type": "text",
+                "label": "question2",
+                "title": "Enter your thoughts",
+                "tooltip": "write what you think",
+                "placeholder": "I think about...",
+                "hierarchy": {
+                    "parentLabel": "thoughts",
+                    "parentValue": true
+                  }
+            }
+        ]
+    }
+]
