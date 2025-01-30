@@ -4,7 +4,8 @@ import os
 
 
 with open("examples/index.json", "w") as f:
-    f.write(json.dumps(os.listdir("examples")))
+    examples = [d for d in os.listdir("examples") if os.path.isdir(f"examples/{d}")]
+    f.write(json.dumps(examples))
 
 dl.setenv("prod")
 dataset = dl.datasets.get(dataset_id="678641e4c1f76e442775afa6")
