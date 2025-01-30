@@ -1,5 +1,10 @@
 import dtlpy as dl
+import json
 import os
+
+
+with open("examples/index.json", "w") as f:
+    f.write(json.dumps(os.listdir("examples")))
 
 dl.setenv("prod")
 dataset = dl.datasets.get(dataset_id="678641e4c1f76e442775afa6")
@@ -21,8 +26,10 @@ for folder in os.listdir("examples"):
         remote_name=f"{folder}-example.json",
         overwrite=True,
         item_metadata={
-            "system": {"shebang": {"dltype": "evaluation-studio"}, 
-                       "evaluation": {"layoutName": folder}}
+            "system": {
+                "shebang": {"dltype": "evaluation-studio"},
+                "evaluation": {"layoutName": folder},
+            }
         },
     )
     print(data_item)
