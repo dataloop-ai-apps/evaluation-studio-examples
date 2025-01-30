@@ -1,7 +1,6 @@
 [
     {
         "title": "Hollywoo Star Details",
-        "layout": { "direction": "horizontal", "wrap": false },
         "components": [
             {
                 "type": "text",
@@ -26,7 +25,6 @@
     },
     {
         "title": "Existential Crisis Corner",
-        "layout": { "direction": "horizontal", "wrap": true },
         "components": [
             {
                 "type": "text",
@@ -49,7 +47,6 @@
     },
     {
         "title": "Mr. Peanutbutter's Positive Vibes",
-        "layout": { "direction": "horizontal", "wrap": true },
         "components": [
             {
                 "type": "text",
