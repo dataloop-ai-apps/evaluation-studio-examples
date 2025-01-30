@@ -1,33 +1,53 @@
 [
     {
-        "title": "User Details",
+        "title": "Inter-dimensional Doughnut Manifestation Portal",
         "components": [
             {
                 "type": "text",
-                "label": "username",
-                "title": "Enter your username",
-                "placeholder": "Enter username"
+                "label": "cosmic_identity",
+                "title": "What name echoes through the void of your doughnut consciousness?",
+                "placeholder": "Your transcendental designation..."
             },
             {
                 "type": "radio",
-                "label": "thoughts",
-                "title": "Do you have any thoughts?",
+                "label": "reality_breach",
+                "title": "Have you witnessed the Great Doughnut speaking in backwards riddles?",
                 "default": false,
                 "options": [
-                    { "label": "Yes", "value": true },
-                    { "label": "No", "value": false }
+                    { "label": "Y̸e̸s̸", "value": true },
+                    { "label": "N̸o̸t̸ ̸y̸e̸t̸", "value": false }
                 ]
             },
             {
                 "type": "text",
-                "label": "question2",
-                "title": "Enter your thoughts",
-                "tooltip": "write what you think",
-                "placeholder": "I think about...",
+                "label": "cosmic_revelation",
+                "title": "Describe your doughnut-induced hallucination",
+                "tooltip": "The sprinkles... they whisper...",
+                "placeholder": "The frosting showed me impossible colors...",
                 "hierarchy": {
-                    "parentLabel": "thoughts",
+                    "parentLabel": "reality_breach",
                     "parentValue": true
-                  }
+                }
+            },
+            {
+                "type": "select",
+                "label": "doughnut_dimension",
+                "title": "From which non-euclidean plane did your doughnut materialize?",
+                "options": [
+                    { "label": "The Möbius Bakery", "value": "mobius" },
+                    { "label": "The Hypercube Café", "value": "hypercube" },
+                    { "label": "The Klein Bottle Kitchen", "value": "klein" },
+                    { "label": "The Fractal Fryer", "value": "fractal" }
+                ]
+            },
+            {
+                "type": "slider",
+                "label": "temporal_glaze",
+                "title": "How many centuries did your doughnut take to simultaneously exist?",
+                "min": -999999999,
+                "max": 999999999,
+                "step": 100000000,
+                "placeholder": "Time is an illusion, glazing is eternal"
             }
         ]
     }

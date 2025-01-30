@@ -1,0 +1,73 @@
+[
+    {
+        "title": "Hollywoo Star Details",
+        "layout": { "direction": "horizontal", "wrap": false },
+        "components": [
+            {
+                "type": "text",
+                "label": "stage_name",
+                "title": "What's your Hollywoo stage name?",
+                "tooltip": "Make it as ridiculous as Princess Carolyn's alliterations",
+                "allowStatus": true,
+                "placeholder": "Character Actress Margo Martindale"
+            },
+            {
+                "type": "radio",
+                "label": "celebrity_status",
+                "title": "Are you famous for the right reasons?",
+                "default": false,
+                "allowStatus": true,
+                "options": [
+                    { "label": "What is this, a crossover episode?", "value": true },
+                    { "label": "That's too much, man!", "value": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Existential Crisis Corner",
+        "layout": { "direction": "horizontal", "wrap": true },
+        "components": [
+            {
+                "type": "text",
+                "label": "life_motto",
+                "title": "What's your self-destructive life motto?",
+                "tooltip": "Channel your inner BoJack",
+                "placeholder": "What are YOU doing here?!"
+            },
+            {
+                "type": "radio",
+                "label": "inner_peace",
+                "title": "Have you found inner peace?",
+                "default": false,
+                "options": [
+                    { "label": "I'm having a good time and I like feeling good about myself", "value": true },
+                    { "label": "Back in the 90s...", "value": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Mr. Peanutbutter's Positive Vibes",
+        "layout": { "direction": "horizontal", "wrap": true },
+        "components": [
+            {
+                "type": "text",
+                "label": "business_idea",
+                "title": "Pitch your next terrible business venture",
+                "tooltip": "The more impractical, the better",
+                "placeholder": "Halloween in January"
+            },
+            {
+                "type": "radio",
+                "label": "doggy_doggy",
+                "title": "What is this?",
+                "default": false,
+                "options": [
+                    { "label": "A normal question", "value": false },
+                    { "label": "Doggy doggy what now?!", "value": true }
+                ]
+            }
+        ]
+    }
+]

@@ -1,17 +1,19 @@
 [
     {
-        "title": "Prompt-Response",
+        "title": "Rate Prompt-Response",
         "components": [
             {
                 "type": "text",
                 "label": "prompt",
                 "title": "Prompt",
+                "allowEdit": false,
                 "placeholder": "Prompt"
             },
             {
                 "type": "text",
                 "label": "response",
                 "title": "Response",
+                "allowEdit": false,
                 "placeholder": "Response"
             },
             {

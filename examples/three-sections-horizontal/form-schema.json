@@ -1,18 +1,18 @@
 [
     {
-        "title": "User Details",
+        "title": "First User Details",
         "layout": { "direction": "horizontal", "wrap": false },
         "components": [
             {
                 "type": "text",
-                "label": "Username",
+                "label": "first_username",
                 "title": "Enter your username",
                 "tooltip": "write what you think",
                 "placeholder": "Enter username"
             },
             {
                 "type": "radio",
-                "label": "correct",
+                "label": "first_correct",
                 "title": "is this correct?",
                 "default": false,
                 "options": [
@@ -23,19 +23,19 @@
         ]
     },
     {
-        "title": "User Details",
+        "title": "Second User Details",
         "layout": { "direction": "horizontal", "wrap": true },
         "components": [
             {
                 "type": "text",
-                "label": "Username",
+                "label": "second_username",
                 "title": "Enter your username",
                 "tooltip": "write what you think",
                 "placeholder": "Enter username"
             },
             {
                 "type": "radio",
-                "label": "correct",
+                "label": "second_correct",
                 "title": "is this correct?",
                 "default": false,
                 "options": [
@@ -46,19 +46,19 @@
         ]
     },
     {
-        "title": "User Details",
+        "title": "Third User Details",
         "layout": { "direction": "horizontal", "wrap": true },
         "components": [
             {
                 "type": "text",
-                "label": "Username",
+                "label": "third_username",
                 "title": "Enter your username",
                 "tooltip": "write what you think",
                 "placeholder": "Enter username"
             },
             {
                 "type": "radio",
-                "label": "correct",
+                "label": "third_correct",
                 "title": "is this correct?",
                 "default": false,
                 "options": [

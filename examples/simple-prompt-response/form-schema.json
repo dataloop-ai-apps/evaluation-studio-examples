@@ -1,6 +1,6 @@
 [
     {
-        "title": "Prompt-Response",
+        "title": "Simple Prompt-Response",
         "components": [
             {
                 "type": "text",
