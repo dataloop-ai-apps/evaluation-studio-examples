@@ -14,8 +14,8 @@
                 "title": "Have you witnessed the Great Doughnut speaking in backwards riddles?",
                 "default": false,
                 "options": [
-                    { "label": "Y̸e̸s̸", "value": true },
-                    { "label": "N̸o̸t̸ ̸y̸e̸t̸", "value": false }
+                    { "label": "Yess", "value": true },
+                    { "label": "Nooooo", "value": false }
                 ]
             },
             {
