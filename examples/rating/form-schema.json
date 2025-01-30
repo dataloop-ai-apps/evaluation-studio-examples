@@ -6,14 +6,14 @@
                 "type": "text",
                 "label": "prompt",
                 "title": "Prompt",
-                "allowEdit": false,
+                "disabled": true,
                 "placeholder": "Prompt"
             },
             {
                 "type": "text",
                 "label": "response",
                 "title": "Response",
-                "allowEdit": false,
+                "disabled": true,
                 "placeholder": "Response"
             },
             {
