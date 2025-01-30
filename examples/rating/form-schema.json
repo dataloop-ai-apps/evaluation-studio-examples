@@ -4,21 +4,21 @@
         "components": [
             {
                 "type": "text",
-                "label": "prompt",
+                "key": "prompt",
                 "title": "Prompt",
                 "disabled": true,
                 "placeholder": "Prompt"
             },
             {
                 "type": "text",
-                "label": "response",
+                "key": "response",
                 "title": "Response",
                 "disabled": true,
                 "placeholder": "Response"
             },
             {
                 "type": "rating",
-                "label": "rating",
+                "key": "rating",
                 "title": "Is the response fine?",
                 "tooltip": "Rate the response",
                 "maxStars": 7,

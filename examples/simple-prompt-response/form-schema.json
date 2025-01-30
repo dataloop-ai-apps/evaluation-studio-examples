@@ -4,13 +4,13 @@
         "components": [
             {
                 "type": "text",
-                "label": "prompt",
+                "key": "prompt",
                 "title": "Prompt",
                 "placeholder": "Prompt"
             },
             {
                 "type": "text",
-                "label": "response",
+                "key": "response",
                 "title": "Response",
                 "placeholder": "Response"
             }

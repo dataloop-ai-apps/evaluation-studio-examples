@@ -4,13 +4,13 @@
         "components": [
             {
                 "type": "text",
-                "label": "cosmic_identity",
+                "key": "cosmic_identity",
                 "title": "What name echoes through the void of your doughnut consciousness?",
                 "placeholder": "Your transcendental designation..."
             },
             {
                 "type": "radio",
-                "label": "reality_breach",
+                "key": "reality_breach",
                 "title": "Have you witnessed the Great Doughnut speaking in backwards riddles?",
                 "default": false,
                 "options": [
@@ -20,7 +20,7 @@
             },
             {
                 "type": "text",
-                "label": "cosmic_revelation",
+                "key": "cosmic_revelation",
                 "title": "Describe your doughnut-induced hallucination",
                 "tooltip": "The sprinkles... they whisper...",
                 "placeholder": "The frosting showed me impossible colors...",
@@ -31,7 +31,7 @@
             },
             {
                 "type": "select",
-                "label": "doughnut_dimension",
+                "key": "doughnut_dimension",
                 "title": "From which non-euclidean plane did your doughnut materialize?",
                 "options": [
                     { "label": "The Möbius Bakery", "value": "mobius" },
@@ -42,7 +42,7 @@
             },
             {
                 "type": "slider",
-                "label": "temporal_glaze",
+                "key": "temporal_glaze",
                 "title": "How many centuries did your doughnut take to simultaneously exist?",
                 "min": -999999999,
                 "max": 999999999,

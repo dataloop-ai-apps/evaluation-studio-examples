@@ -4,14 +4,14 @@
         "components": [
             {
                 "type": "text",
-                "label": "wonderland_name",
+                "key": "wonderland_name",
                 "title": "What name shall you be known by in Wonderland?",
                 "tooltip": "Look through the looking glass to find your true name",
                 "placeholder": "Curiouser and curiouser..."
             },
             {
                 "type": "select",
-                "label": "tea_party_size",
+                "key": "tea_party_size",
                 "title": "How many impossible things did you believe before breakfast?",
                 "options": [
                     { "label": "Six", "value": "6" },
@@ -27,19 +27,19 @@
         "components": [
             {
                 "type": "text",
-                "label": "riddle",
+                "key": "riddle",
                 "title": "Why is a raven like a writing desk?",
                 "placeholder": "Ponder your answer carefully..."
             },
             {
                 "type": "text",
-                "label": "solution",
+                "key": "solution",
                 "title": "What's your solution to the riddle?",
                 "placeholder": "The madder the better!"
             },
             {
                 "type": "select",
-                "label": "madness_level",
+                "key": "madness_level",
                 "title": "How mad are you right now?",
                 "placeholder": "We're all mad here!",
                 "tooltip": "The Cheshire Cat wants to know",
@@ -52,13 +52,13 @@
             },
             {
                 "type": "text",
-                "label": "unbirthday_wish",
+                "key": "unbirthday_wish",
                 "title": "Make a very merry unbirthday wish",
                 "placeholder": "A very merry unbirthday to..."
             },
             {
                 "type": "radio",
-                "label": "time_frozen",
+                "key": "time_frozen",
                 "title": "Is it always six o'clock?",
                 "default": true,
                 "options": [

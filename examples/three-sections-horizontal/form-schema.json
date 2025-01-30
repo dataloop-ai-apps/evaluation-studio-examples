@@ -5,14 +5,14 @@
         "components": [
             {
                 "type": "text",
-                "label": "first_username",
+                "key": "first_username",
                 "title": "Enter your username",
                 "tooltip": "write what you think",
                 "placeholder": "Enter username"
             },
             {
                 "type": "radio",
-                "label": "first_correct",
+                "key": "first_correct",
                 "title": "is this correct?",
                 "default": false,
                 "options": [
@@ -28,14 +28,14 @@
         "components": [
             {
                 "type": "text",
-                "label": "second_username",
+                "key": "second_username",
                 "title": "Enter your username",
                 "tooltip": "write what you think",
                 "placeholder": "Enter username"
             },
             {
                 "type": "radio",
-                "label": "second_correct",
+                "key": "second_correct",
                 "title": "is this correct?",
                 "default": false,
                 "options": [
@@ -51,14 +51,14 @@
         "components": [
             {
                 "type": "text",
-                "label": "third_username",
+                "key": "third_username",
                 "title": "Enter your username",
                 "tooltip": "write what you think",
                 "placeholder": "Enter username"
             },
             {
                 "type": "radio",
-                "label": "third_correct",
+                "key": "third_correct",
                 "title": "is this correct?",
                 "default": false,
                 "options": [
