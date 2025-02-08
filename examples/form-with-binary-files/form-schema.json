@@ -16,7 +16,7 @@
             {
                 "type": "video",
                 "key": "floating_video",
-                "title": "Le château des Pyrénées (A castle floating in the sky)"
+                "title": "Le chateau des Pyrenees (A castle floating in the sky)"
             },
             {
                 "type": "audio",
@@ -28,8 +28,8 @@
                 "key": "sky_time",
                 "title": "What time is it in the sky?",
                 "options": [
-                    { "label": "L'Empire des lumières (Day)", "value": "day" },
-                    { "label": "L'Empire des lumières (Night)", "value": "night" },
+                    { "label": "L'Empire des lumieres (Day)", "value": "day" },
+                    { "label": "L'Empire des lumieres (Night)", "value": "night" },
                     { "label": "Both simultaneously", "value": "paradox" }
                 ]
             },
