@@ -1,0 +1,22 @@
+{
+    "chat_a": [
+        {
+            "role": "user",
+            "content": "Hello!"
+        },
+        {
+            "role": "assistant",
+            "content": "Hi there! How can I help you today?"
+        }
+    ],
+    "chat_b": [
+        {
+            "role": "user",
+            "content": "Hello!"
+        },
+        {
+            "role": "assistant",
+            "content": "Hail, good sir or madam! How may I be of service to thee?"
+        }
+    ]
+}

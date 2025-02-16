@@ -1,0 +1,40 @@
+[
+    {
+      "title": "Chats",
+      "layout": {
+        "direction": "horizontal"
+      },
+      "components": [
+        {
+          "type": "conversation",
+          "key": "chat_a",
+          "title": "Conversation"
+        },
+        {
+          "type": "conversation",
+          "key": "chat_b",
+          "title": "Conversation"
+        }
+      ]
+    },
+    {
+      "title": "Quastion",
+      "components": [
+        {
+          "type": "radio",
+          "key": "better",
+          "title": "Which one is more formal?",
+          "options": [
+            {
+              "label": "Left Chat",
+              "value": "a"
+            },
+            {
+              "label": "Right Chat",
+              "value": "b"
+            }
+          ]
+        }
+      ]
+    }
+  ]
