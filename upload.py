@@ -7,8 +7,8 @@ with open("examples/index.json", "w") as f:
     examples = [d for d in os.listdir("examples") if os.path.isdir(f"examples/{d}")]
     f.write(json.dumps(examples))
 
-dl.setenv("prod")
-dataset = dl.datasets.get(dataset_id="67b1d53aa697b09dd00831b9")
+dl.setenv("rc")
+dataset = dl.datasets.get(dataset_id="67b465a6be6c2c1a9e682ee2")
 
 binaries_dataset = dataset.project.datasets._get_binaries_dataset()
 

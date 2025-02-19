@@ -1,11 +1,12 @@
 [
+    "compare-conversations",
     "form-with-binary-files",
     "form-with-url",
+    "options-and-selections",
     "rating",
     "simple-prompt-response",
     "three-sections-horizontal",
     "two-sections-vertical",
     "with-hierarchy",
-    "with-status-update",
-    "compare-conversations"
+    "with-status-update"
 ]
