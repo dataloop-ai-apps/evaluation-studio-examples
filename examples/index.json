@@ -8,5 +8,7 @@
     "three-sections-horizontal",
     "two-sections-vertical",
     "with-hierarchy",
-    "with-status-update"
+    "with-status-update",
+    "custom-js-code",
+    "custom-css"
 ]
