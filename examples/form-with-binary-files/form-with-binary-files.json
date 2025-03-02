@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Ceci n'est pas un formulaire",
+        "components": [
+            {
+                "type": "text",
+                "key": "artist_name",
+                "title": "This is not your name",
+                "placeholder": "La trahison des mots"
+            },
+            {
+                "type": "image",
+                "key": "pipe_image",
+                "title": "Ceci n'est pas une pipe"
+            },
+            {
+                "type": "video",
+                "key": "floating_video",
+                "title": "Le chateau des Pyrenees (A castle floating in the sky)"
+            },
+            {
+                "type": "audio",
+                "key": "silence_audio",
+                "title": "The sound of green apples falling in bowler hats"
+            },
+            {
+                "type": "select",
+                "key": "sky_time",
+                "title": "What time is it in the sky?",
+                "options": [
+                    { "label": "L'Empire des lumieres (Day)", "value": "day" },
+                    { "label": "L'Empire des lumieres (Night)", "value": "night" },
+                    { "label": "Both simultaneously", "value": "paradox" }
+                ]
+            },
+            {
+                "type": "radio",
+                "key": "mirror_truth",
+                "title": "Is this a mirror?",
+                "options": [
+                    { "label": "La Reproduction Interdite (Yes, but you'll see your back)", "value": true },
+                    { "label": "Non, c'est une question", "value": false }
+                ]
+            }
+        ]
+    }
+]
