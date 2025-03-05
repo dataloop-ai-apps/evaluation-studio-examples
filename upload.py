@@ -8,7 +8,7 @@ with open("examples/index.json", "w") as f:
     f.write(json.dumps(examples))
 
 dl.setenv("prod")
-dataset = dl.datasets.get(dataset_id="67bf09afb4ae7bc93ec8e93b")
+dataset = dl.datasets.get(dataset_id="678641e4c1f76e442775afa6")
 
 binaries_dataset = dataset.project.datasets._get_binaries_dataset()
 
