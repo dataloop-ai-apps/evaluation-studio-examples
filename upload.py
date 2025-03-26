@@ -18,7 +18,7 @@ for folder in os.listdir("examples"):
     
     _ = binaries_dataset.items.upload(
         local_path=f"examples/{folder}/*",
-        remote_path=f"/.dataloop/evaluation-studio-layouts",
+        remote_path=f"/.dataloop/evaluation-studio-layouts/{folder}",
         overwrite=True,
     )
     
