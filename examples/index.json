@@ -1,1 +1,15 @@
-["compare-conversations", "custom-css", "custom-js-code", "form-with-binary-files", "form-with-url", "options-and-selections", "rating", "simple-prompt-response", "three-sections-horizontal", "two-sections-vertical", "with-hierarchy", "with-status-update"]
+[
+    "compare-conversations",
+    "custom-css",
+    "custom-js-code",
+    "custom-validations-js-code",
+    "form-with-binary-files",
+    "form-with-url",
+    "options-and-selections",
+    "rating",
+    "simple-prompt-response",
+    "three-sections-horizontal",
+    "two-sections-vertical",
+    "with-hierarchy",
+    "with-status-update"
+]
