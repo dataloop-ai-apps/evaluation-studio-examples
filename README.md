@@ -147,7 +147,7 @@ See `examples/two-sections-vertical/` for a form with multiple vertical sections
 See `examples/form-with-binary-files/` for handling images, videos, and audio.
 
 ### 4. Hierarchical Form
-See `examples/with-hierarchy/` for forms with conditional fields.
+See `examples/with-conditional-hierarchy/` for forms with conditional fields.
 
 ### 5. Status-Enabled Form
 See `examples/with-status-update/` for forms with status update capabilities.

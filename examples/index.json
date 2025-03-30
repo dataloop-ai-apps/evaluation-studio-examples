@@ -10,6 +10,6 @@
     "simple-prompt-response",
     "three-sections-horizontal",
     "two-sections-vertical",
-    "with-hierarchy",
+    "with-conditional-hierarchy",
     "with-status-update"
 ]

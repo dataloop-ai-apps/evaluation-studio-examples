@@ -1,0 +1,217 @@
+[
+    {
+      "title": "Conditional Field Examples",
+      "components": [
+        {
+          "type": "select",
+          "key": "tea_party_size",
+          "title": "How many impossible things did you believe before breakfast?",
+          "options": [
+            {
+              "label": "Six",
+              "value": "6"
+            },
+            {
+              "label": "None, I'm late!",
+              "value": "0"
+            },
+            {
+              "label": "Precisely 42",
+              "value": "42"
+            },
+            {
+              "label": "As many as the Dormouse's tales",
+              "value": "infinity"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "key": "tea_types",
+          "title": "What kinds of tea do you enjoy?",
+          "options": [
+            {
+              "label": "Earl Grey",
+              "value": "earl_grey"
+            },
+            {
+              "label": "Chamomile",
+              "value": "chamomile"
+            },
+            {
+              "label": "Darjeeling",
+              "value": "darjeeling"
+            },
+            {
+              "label": "Herbal",
+              "value": "herbal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "key": "riddle_answer",
+          "title": "Answer the riddle",
+          "placeholder": "Your clever answer here"
+        },
+        {
+          "type": "radio",
+          "key": "time_frozen",
+          "title": "Is it always six o'clock?",
+          "default": true,
+          "options": [
+            {
+              "label": "Time stands still for tea",
+              "value": true
+            },
+            {
+              "label": "Time is running mad",
+              "value": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conditionally Visible Fields",
+      "components": [
+        {
+          "type": "text",
+          "key": "simple_conditional",
+          "title": "Simple Conditional (Shows when tea_party_size is '6')",
+          "placeholder": "This appears when tea_party_size = 6",
+          "hierarchy": {
+            "condition": {
+              "tea_party_size": {
+                "$eq": "6"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "key": "case_insensitive_match",
+          "title": "Case-Insensitive Match Example",
+          "placeholder": "Shows when riddle_answer contains 'raven' (case insensitive)",
+          "hierarchy": {
+            "condition": {
+              "riddle_answer": {
+                "$ilike": "*raven*"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "key": "complex_and_condition",
+          "title": "Complex AND Condition",
+          "placeholder": "Shows when tea_party_size = 42 AND time_frozen = true",
+          "hierarchy": {
+            "condition": {
+              "$and": [
+                {
+                  "tea_party_size": {
+                    "$eq": "42"
+                  }
+                },
+                {
+                  "time_frozen": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "key": "complex_or_condition",
+          "title": "Complex OR Condition",
+          "placeholder": "Shows when tea_party_size = 0 OR tea_party_size = infinity",
+          "hierarchy": {
+            "condition": {
+              "$or": [
+                {
+                  "tea_party_size": {
+                    "$eq": "0"
+                  }
+                },
+                {
+                  "tea_party_size": {
+                    "$eq": "infinity"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "key": "checkbox_conditional",
+          "title": "Checkbox Conditional",
+          "placeholder": "Shows when Earl Grey or Darjeeling is selected",
+          "hierarchy": {
+            "condition": {
+              "tea_types": {
+                "$in": [
+                  "earl_grey",
+                  "darjeeling"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "key": "exists_conditional",
+          "title": "Exists Conditional",
+          "placeholder": "Shows when riddle_answer has any value",
+          "hierarchy": {
+            "condition": {
+              "riddle_answer": {
+                "$exists": true
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "key": "nested_complex_condition",
+          "title": "Nested Complex Condition",
+          "placeholder": "Complex nested conditions example",
+          "hierarchy": {
+            "condition": {
+              "$or": [
+                {
+                  "$and": [
+                    {
+                      "tea_party_size": {
+                        "$eq": "6"
+                      }
+                    },
+                    {
+                      "time_frozen": true
+                    }
+                  ]
+                },
+                {
+                  "$and": [
+                    {
+                      "tea_types": {
+                        "$in": [
+                          "chamomile"
+                        ]
+                      }
+                    },
+                    {
+                      "riddle_answer": {
+                        "$exists": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
