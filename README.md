@@ -1,172 +1,523 @@
-# Form Schema Documentation
+# Evaluation Studio
 
-This documentation outlines the capabilities and components available in the form schema system. The system supports rich, interactive forms with various layouts and component types.
+A powerful web-based application designed for evaluating Large Language Model (LLM) performance through interactive layouts and dynamic components.
 
-## Schema Structure
+## Features
 
-Forms are defined using JSON schema arrays, where each form consists of sections containing components:
+-   **Studio Builder**: Design custom evaluation layouts with drag-and-drop interface
+-   **Studio Evaluator**: Run and analyze LLM performance
+-   **Dynamic Components**: Support for multiple input/output types
+-   **Dataset Integration**: Seamless integration with Dataloop platform
+-   **Custom Styling**: Add custom CSS for form styling
+-   **Form Validation**: Add custom JavaScript for form validation and dynamic behavior
+-   **Hierarchical Forms**: Support for conditional form fields based on parent values
 
-```json
-[
-    {
-        "title": "Section Title",
-        "layout": { 
-            "direction": "horizontal|vertical",
-            "wrap": true|false 
-        },
-        "components": [
-            // components go here
-        ]
-    }
-]
-```
+## Components Library
 
-## Layouts
+<details>
+<summary>Common Properties</summary>
 
-### Section Layouts
+All components support these base properties:
 
-- **Vertical** (default): Components stack vertically
-- **Horizontal**: Components align horizontally
-  - `wrap`: Controls whether components wrap to next line
-  - Example: `"layout": { "direction": "horizontal", "wrap": true }`
+-   `key` (string, required): Unique identifier for the field
+-   `type` (string, required): Component type identifier
+-   `title` (string): Display title for the field
+-   `tooltip` (string): Hover tooltip text
+-   `hidden` (boolean): Whether the component should be hidden
+-   `required` (boolean): Whether the field is required
+-   `hierarchy` (object): Conditional visibility rules
+    -   `condition` (string): DQL condition to evaluate
 
-## Components
+</details>
+
+<details>
+<summary>Input Components</summary>
+
+### Title
+
+-   Type: `title`
+-   Properties:
+    -   All common properties
+    -   `placeholder` (string): Placeholder text
 
 ### Text Input
-```json
-{
-    "type": "text",
-    "key": "field_name",
-    "title": "Display Title",
-    "placeholder": "Placeholder text",
-    "tooltip": "Helper text shown on hover",
-    "allowStatus": true  // Optional: Enables status updates
-}
-```
 
-### Radio Buttons
-```json
-{
-    "type": "radio",
-    "key": "choice_field",
-    "title": "Question Title",
-    "default": false,
-    "allowStatus": true,  // Optional
-    "options": [
-        { "label": "Option 1", "value": true },
-        { "label": "Option 2", "value": false }
-    ]
-}
-```
+-   Type: `text`
+-   Properties:
+    -   All common properties
+    -   `placeholder` (string): Placeholder text
+    -   `disabled` (boolean): Whether the field is disabled
+    -   `errorMessage` (string): Error message to display
 
-### Select Dropdown
-```json
-{
-    "type": "select",
-    "key": "dropdown_field",
-    "title": "Dropdown Title",
-    "placeholder": "Select an option",
-    "tooltip": "Helper text",
-    "options": [
-        { "label": "Option 1", "value": "value1" },
-        { "label": "Option 2", "value": "value2" }
-    ]
-}
-```
+### Select
+
+-   Type: `select`
+-   Properties:
+    -   All common properties
+    -   `options` (array, required): Array of options
+        -   `label` (string): Display text
+        -   `value` (any): Option value
+    -   `disabled` (boolean): Whether the field is disabled
+
+### Radio Group
+
+-   Type: `radio`
+-   Properties:
+    -   All common properties
+    -   `options` (array, required): Array of options
+        -   `label` (string): Display text
+        -   `value` (any): Option value
+    -   `disabled` (boolean): Whether the field is disabled
+
+### Checkbox Group
+
+-   Type: `checkbox`
+-   Properties:
+    -   All common properties
+    -   `options` (array, required): Array of options
+        -   `label` (string): Display text
+        -   `value` (any): Option value
+    -   `disabled` (boolean): Whether the field is disabled
 
 ### Slider
+
+-   Type: `slider`
+-   Properties:
+    -   All common properties
+    -   `min` (number): Minimum value
+    -   `max` (number): Maximum value
+    -   `default` (number): Default value
+    -   `step` (number): Step increment
+    -   `disabled` (boolean): Whether the field is disabled
+
+</details>
+
+<details>
+<summary>Media Components</summary>
+
+### Image Viewer
+
+-   Type: `image`
+-   Properties:
+    -   All common properties
+
+### Audio Viewer
+
+-   Type: `audio`
+-   Properties:
+    -   All common properties
+
+### Video Viewer
+
+-   Type: `video`
+-   Properties:
+    -   All common properties
+
+### URL Viewer
+
+-   Type: `url`
+-   Properties:
+    -   All common properties
+    -   `initialWidth` (number): Initial iframe width
+    -   `initialHeight` (number): Initial iframe height
+
+### Markdown Viewer
+
+-   Type: `markdown`
+-   Properties:
+    -   All common properties
+    -   `content` (string): Markdown content to render
+
+</details>
+
+<details>
+<summary>Special Components</summary>
+
+### Star Rating
+
+-   Type: `rating`
+-   Properties:
+    -   All common properties
+    -   `maxStars` (number): Maximum number of stars (default: 5)
+    -   `showValue` (boolean): Whether to show numeric value
+
+### Conversation
+
+-   Type: `conversation`
+-   Properties:
+    -   All common properties
+
+</details>
+
+## Studio Builder
+
+The Studio Builder provides a drag-and-drop interface for creating custom evaluation layouts.
+
+### Layout Structure
+
+Layouts are defined in JSON format with the following structure:
+
 ```json
 {
-    "type": "slider",
-    "key": "slider_field",
-    "title": "Slider Title",
-    "min": -999999999,
-    "max": 999999999,
-    "step": 100000000,
-    "placeholder": "Slider placeholder"
+  "sections": [
+    {
+      "title": "Section Title",
+      "hidden": false,  // Optional: hide/show entire section
+      "layout": {
+        "direction": "vertical|horizontal",
+        "wrap": true|false
+      },
+      "components": [
+        {
+          "type": "text",
+          "key": "textInput1",
+          "title": "Text Input",
+          "placeholder": "Enter text...",
+          "tooltip": "Help text",
+          "required": true,
+          "hidden": false  // Optional: hide/show component
+        }
+      ]
+    }
+  ]
 }
 ```
 
-### Media Components
+### Visibility Control
 
-#### Image
-```json
-{
-    "type": "image",
-    "key": "image_field",
-    "title": "Image Title"
-}
-```
+Components and sections can be hidden in three ways:
 
-#### Video
-```json
-{
-    "type": "video",
-    "key": "video_field",
-    "title": "Video Title"
-}
-```
+1. **Direct hiding**: Use the `hidden` property
 
-#### Audio
-```json
-{
-    "type": "audio",
-    "key": "audio_field",
-    "title": "Audio Title"
-}
-```
-
-## Advanced Features
-
-### Hierarchical Dependencies
-Components can be conditionally shown based on parent field values:
 ```json
 {
     "type": "text",
-    "key": "conditional_field",
-    "title": "Conditional Field",
+    "key": "hiddenField",
+    "hidden": true
+}
+```
+
+2. **Hierarchical fields**: Make visibility conditional on other field values
+
+```json
+{
+    "type": "text",
+    "key": "childField",
+    "title": "Child Field",
     "hierarchy": {
-        "parentLabel": "parent_field",
-        "parentValue": true
+        "condition": { "tea_party_size": { "$eq": "6" } }
     }
 }
 ```
 
-### Status Updates
-Components can support status updates by adding `"allowStatus": true`
+More examples:
 
-## Example Use Cases
-
-### 1. Basic Form
-See `examples/simple-prompt-response/` for a basic form implementation.
-
-### 2. Two-Section Vertical Layout
-See `examples/two-sections-vertical/` for a form with multiple vertical sections.
-
-### 3. Media Form
-See `examples/form-with-binary-files/` for handling images, videos, and audio.
-
-### 4. Hierarchical Form
-See `examples/with-conditional-hierarchy/` for forms with conditional fields.
-
-### 5. Status-Enabled Form
-See `examples/with-status-update/` for forms with status update capabilities.
-
-## Response Format
-
-Form responses should match the schema structure using the defined keys. Example:
+-   Show if riddle answer contains "raven":
 
 ```json
 {
-    "field_key": "field_value",
-    "another_key": "another_value"
+    "condition": { "riddle_answer": { "$ilike": "*raven*" } }
 }
 ```
 
-## Best Practices
+-   Use AND logic to show if tea party size is 42 and time is frozen:
 
-1. Use meaningful keys that reflect the data being collected
-2. Provide clear titles and tooltips for better user experience
-3. Use appropriate component types for the data being collected
-4. Consider mobile responsiveness when using horizontal layouts
-5. Use hierarchical dependencies sparingly to maintain form simplicity
+```json
+  "condition": {
+            "$and": [
+              {
+                "tea_party_size": {
+                  "$eq": "42"
+                }
+              },
+              {
+                "time_frozen": true
+              }
+            ]
+          }
+```
+
+-   Use OR logic to show if tea party size is 42 or time is frozen:
+
+```json
+{
+    "condition": {
+        "$or": [
+            {
+                "tea_party_size": {
+                    "$eq": "0"
+                }
+            },
+            {
+                "tea_party_size": {
+                    "$eq": "infinity"
+                }
+            }
+        ]
+    }
+}
+```
+
+-   Use IN logic to show if tea party size is 0, 42 or infinity:
+
+```json
+{
+    "condition": {
+        "tea_types": {
+            "$in": ["earl_grey", "darjeeling"]
+        }
+    }
+}
+```
+
+-   Use EXISTS logic to show if tea party size is not 0:
+
+```json
+{
+    "condition": {
+        "riddle_answer": {
+            "$exists": true
+        }
+    }
+}
+```
+
+-   Advance exmaple:
+
+```json
+{
+    "condition": {
+        "$or": [
+            {
+                "$and": [
+                    {
+                        "tea_party_size": {
+                            "$eq": "6"
+                        }
+                    },
+                    {
+                        "time_frozen": true
+                    }
+                ]
+            },
+            {
+                "$and": [
+                    {
+                        "tea_types": {
+                            "$in": ["chamomile"]
+                        }
+                    },
+                    {
+                        "riddle_answer": {
+                            "$exists": true
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+1. **Dynamic hiding**: Use JavaScript to control visibility
+
+```javascript
+module.exports = {
+    run: async function (formData, formLayout) {
+        // Hide field based on some condition
+        formLayout[0].components[0].hidden = someCondition;
+        return {
+            formData,
+            formLayout,
+        };
+    },
+};
+```
+
+## JS and CSS for Dynamic Behavior
+
+### JavaScript Module
+
+Add custom validation and dynamic behavior by providing a JavaScript module:
+
+```javascript
+module.exports = {
+    run: async function (formData, formLayout) {
+        // Modify form data or layout
+        return {
+            formData: modifiedData,
+            formLayout: modifiedLayout,
+        };
+    },
+};
+```
+
+### Custom CSS
+
+Add custom styling by providing CSS:
+
+```css
+.form-section {
+    /* Custom section styling */
+}
+
+.field-container {
+    /* Custom field styling */
+}
+```
+
+## Studio Evaluator
+
+### Usage
+
+The evaluator allows you to:
+
+1. Load predefined layouts
+2. Run evaluations against LLMs
+3. Collect and analyze results
+4. Add review flags and issue markers to responses
+
+### Integration Script
+
+Use the following Python script to upload evaluation items:
+
+```python
+import dtlpy as dl
+import io
+
+# Get the dataset
+dataset = dl.datasets.get(dataset_id='${datasetId}')
+
+# Create a io.BytesIO object from the data json
+data = ${JSON.stringify(formData, null, 2)}
+buffer = io.BytesIO(data)
+
+item = dataset.items.upload(
+    file=buffer,
+    name='${formName}-data.json',
+    metadata={
+        'system': {
+            'shebang': {
+                'dltype': 'evaluation-studio'
+            },
+            'evaluation': {
+                'layoutName': '${formName}'
+            }
+        }
+    }
+)
+
+print("Item uploaded successfully:", item.id)
+print("Open in platform:", item.platform_url)
+```
+
+## Form Validation
+
+The Studio supports two types of validation:
+
+### 1. Built-in Required Field Validation
+
+Components can be marked as required using the `required` property:
+
+```json
+{
+    "type": "text",
+    "key": "requiredField",
+    "title": "Required Field",
+    "required": true
+}
+```
+
+### 2. Custom JavaScript Validation
+
+Add custom validation logic by providing a JavaScript module that exports a `run` function:
+
+```javascript
+module.exports = {
+    run: async function (formData, formLayout) {
+        // Modify form data or layout
+        // Perform custom validation
+        return {
+            formData: modifiedData, // Optional: modified form data
+            formLayout: modifiedLayout, // Optional: modified layout
+            validationResult: {
+                pass: true | false, // Validation result
+                errorMessage: "Error message if validation fails",
+            },
+        };
+    },
+};
+```
+
+### Validation Results
+
+The validation system returns a `FormJsResult` object containing:
+
+-   `missingRequiredFields`: Array of required fields that are empty
+-   `runScript`: Results from custom validation including:
+    -   Modified form data and layout
+    -   Validation result with pass/fail status and error message
+
+### Working in Tasks and Assignments
+
+Form validation is automatically performed when a status change is activated on an item from a task.
+
+Failed validations will:
+
+1. Block status changes
+2. Display error messages
+3. Show custom validation error messages
+
+### Auto-save and Validation
+
+The form implements debounced auto-saving that:
+
+-   Triggers validation before saving
+-   Saves changes after 2 seconds of inactivity
+-   Tracks modifications using deep comparison
+-   Preserves complex data structures (arrays, nested objects)
+
+## Development
+
+### Prerequisites
+
+-   Node.js (v14 or higher)
+-   npm or yarn package manager
+
+### Setup
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+### Running the Application
+
+1. Build the panels:
+
+```bash
+./create_panels.sh
+```
+
+2. Start the development server:
+
+```bash
+npm run dev
+```
+
+### Project Structure
+
+-   `src/`: Source code directory
+    -   `services/`: Core services including code generation and layout management
+    -   `pages/`: Vue components for different pages
+    -   `components/`: Reusable UI components
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+
+## License
+
+[Add your license information here]
