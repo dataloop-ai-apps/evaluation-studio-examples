@@ -1,0 +1,20 @@
+.form-section {
+    /* Custom section styling */
+}
+
+.field-container {
+    margin-bottom: 8px;
+}
+
+.section-content {
+    gap: 0;
+    padding: 0;
+}
+
+.media-container {
+    margin: 0;
+}
+
+.field-text2 {
+    width: 250px;
+}

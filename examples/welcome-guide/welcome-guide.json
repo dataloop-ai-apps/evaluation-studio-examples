@@ -3,16 +3,24 @@
     "components": [
       {
         "type": "markdown",
-        "key": "intro",
-        "errorMessage": "null"
+        "key": "intro"
       },
       {
         "type": "markdown",
-        "key": "structure"
+        "key": "Components-common-properties"
       },
       {
         "type": "markdown",
-        "key": "Components-into+text"
+        "key": "Components-title"
+      },
+      {
+        "type": "title",
+        "key": "title",
+        "title": "Title component"
+      },
+      {
+        "type": "markdown",
+        "key": "Components-text"
       },
       {
         "type": "text",
@@ -21,8 +29,10 @@
         "tooltip": "Tooltip...",
         "hidden": false,
         "required": true,
-        "errorMessage": "Example error message...",
-        "placeholder": "Placeholder..."
+        "allowStatus": true,
+        "errorMessage": "",
+        "placeholder": "Placeholder...",
+        "numRows": 2
       },
       {
         "type": "markdown",
