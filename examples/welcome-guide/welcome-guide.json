@@ -11,15 +11,6 @@
       },
       {
         "type": "markdown",
-        "key": "Components-title"
-      },
-      {
-        "type": "title",
-        "key": "title",
-        "title": "Title component"
-      },
-      {
-        "type": "markdown",
         "key": "Components-text"
       },
       {
@@ -42,6 +33,7 @@
         "type": "select",
         "key": "select",
         "title": "Dropdown input",
+        "allowStatus": true,
         "options": [
           {
             "label": "Option1",
@@ -61,6 +53,7 @@
         "type": "radio",
         "key": "radio",
         "title": "Radio input",
+        "allowStatus": true,
         "options": [
           {
             "label": "Option1",
@@ -80,6 +73,7 @@
         "type": "checkbox",
         "key": "checkbox",
         "title": "Checkbox input",
+        "allowStatus": true,
         "options": [
           {
             "label": "Option1",
@@ -99,6 +93,7 @@
         "type": "slider",
         "key": "slider",
         "title": "Slider input",
+        "allowStatus": true,
         "min": 0,
         "max": 100,
         "step": 1,
@@ -112,8 +107,18 @@
         "type": "rating",
         "key": "rating",
         "title": "Star-rating input",
+        "allowStatus": true,
         "maxStars": 5,
         "showValue": true
+      },
+      {
+        "type": "markdown",
+        "key": "Components-conversation"
+      },
+      {
+        "type": "conversation",
+        "key": "conversation",
+        "title": "Conversation viewer"
       },
       {
         "type": "markdown",
@@ -149,20 +154,13 @@
       {
         "type": "url",
         "key": "url",
-        "title": "URL viewer"
+        "title": "URL viewer",
+        "initialWidth": 480,
+        "initialHeight": 300
       },
       {
         "type": "markdown",
         "key": "Components-markdown"
-      },
-      {
-        "type": "markdown",
-        "key": "Components-conversation"
-      },
-      {
-        "type": "conversation",
-        "key": "conversation",
-        "title": "Conversation viewer"
       },
       {
         "type": "markdown",
@@ -171,10 +169,9 @@
       {
         "type": "radio",
         "key": "parentField",
-        "title": "Click to show",
         "options": [
           {
-            "label": "Show",
+            "label": "Click to reveal `childField`",
             "value": "true"
           }
         ]
@@ -201,7 +198,7 @@
       {
         "type": "text",
         "key": "text2",
-        "title": "Type more than 11 characters...",
+        "title": "Type more than 5 characters...",
         "errorMessage": "",
         "placeholder": "My width is 250px!"
       },

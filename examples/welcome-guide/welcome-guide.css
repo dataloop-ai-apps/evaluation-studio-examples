@@ -1,9 +1,10 @@
 .form-section {
-    /* Custom section styling */
+    padding-top: 0px;
 }
 
 .field-container {
-    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .section-content {
@@ -13,8 +14,30 @@
 
 .media-container {
     margin: 0;
+    padding-top: 12px;
+}
+
+.field-title {
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .field-text2 {
     width: 250px;
+    padding-left: 16px;
+}
+
+.field-text,
+.field-image,
+.field-audio,
+.field-video,
+.field-url,
+.field-select,
+.field-radio,
+.field-checkbox,
+.field-slider,
+.field-rating,
+.field-conversation,
+.field-parentField {
+    padding-left: 16px;
 }

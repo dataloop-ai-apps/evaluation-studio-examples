@@ -5,8 +5,8 @@ function run (formData, formLayout) {
     // formData: the data that is set on the form
     // formLayout: the layout of the form, you can change the layout to show error messages or other ui elements
     // Set an error message on the component if the name is too long
-    if (formData.text2.length > 10) {
-        formLayout[0].components[32].errorMessage = `The name is too long, Max 10 characters. ${formData.text2.length}/10`;
+    if (formData.text2.length > 5) {
+        formLayout[0].components[30].errorMessage = `The name is too long, Max 5 characters. ${formData.text2.length}/5`;
         window.dl.sendEvent({
             name: "app:toastMessage",
             payload: {
@@ -16,7 +16,7 @@ function run (formData, formLayout) {
         });
     }
     else {
-        formLayout[0].components[32].errorMessage = ''
+        formLayout[0].components[30].errorMessage = ''
     }
     // Log the form data to the console
     console.log('Consoling from the JS code');
