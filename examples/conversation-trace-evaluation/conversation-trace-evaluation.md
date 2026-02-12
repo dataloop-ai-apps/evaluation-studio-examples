@@ -1,0 +1,1 @@
+Compares outputs from two LLM applications, presenting a side-by-side view of conversation traces, models used, prompt properties, and tools invoked. Annotations enable human-in-the-loop reviewers to assess differences and indicate which version is preferred.
